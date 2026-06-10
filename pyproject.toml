@@ -1,13 +1,11 @@
 [project]
 name = "ov-pipeline"
 version = "0.1.0"
-description = "Add your description here"
-readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.12,<3.13"
+
 dependencies = [
-    "databricks-sdk>=0.116.0",
-    "databricks-sql-connector>=2.0.2",
-    "pandas>=3.0.3",
+    "dbt-databricks",
+    "pandas>=2.2.3",
     "python-dotenv>=1.2.2",
     "requests>=2.34.2",
 ]
