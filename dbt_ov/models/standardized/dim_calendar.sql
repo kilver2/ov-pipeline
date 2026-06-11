@@ -4,7 +4,7 @@ WITH source AS (
 
 cleaned AS (
     SELECT DISTINCT
-        date,
+        {{ clean_empty_strings('date') }} AS date,
         TO_DATE(date, 'yyyyMMdd') AS date_parsed,
         DAYOFWEEK(TO_DATE(date, 'yyyyMMdd')) AS day_of_week,
         CASE DAYOFWEEK(TO_DATE(date, 'yyyyMMdd'))
@@ -19,8 +19,11 @@ cleaned AS (
         WEEKOFYEAR(TO_DATE(date, 'yyyyMMdd')) AS week_number,
         MONTH(TO_DATE(date, 'yyyyMMdd')) AS month,
         YEAR(TO_DATE(date, 'yyyyMMdd')) AS year,
-        CASE WHEN DAYOFWEEK(TO_DATE(date, 'yyyyMMdd')) IN (1, 7) THEN TRUE ELSE FALSE END AS is_weekend
+        CASE WHEN DAYOFWEEK(TO_DATE(date, 'yyyyMMdd')) IN (1, 7) 
+            THEN TRUE ELSE FALSE 
+        END AS is_weekend
     FROM source
+    WHERE date IS NOT NULL
 )
 
 SELECT * FROM cleaned

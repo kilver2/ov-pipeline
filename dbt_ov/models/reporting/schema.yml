@@ -14,12 +14,27 @@ models:
         tests:
           - not_null
 
-  - name: agg_trips_per_day
-    description: "Aantal ritten per dag van de week"
+  - name: agg_trips_per_route
+    description: "Aantal ritten per route"
     columns:
-      - name: day_of_week
+      - name: route_short_name
         tests:
           - not_null
       - name: total_trips
         tests:
           - not_null
+
+  - name: agg_rituitval
+    description: "Rituitval percentage per vervoerder en type vervoer"
+    columns:
+      - name: agency_name
+        tests:
+          - not_null
+      - name: uitval_percentage
+        tests:
+          - not_null
+      - name: uitval_percentage
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              max_value: 100

@@ -4,12 +4,16 @@ WITH source AS (
 
 cleaned AS (
     SELECT
-        agency_id,
-        agency_name,
-        agency_url,
-        agency_timezone
+        {{ clean_empty_strings('agency_id') }} AS agency_id,
+        {{ clean_empty_strings('agency_name') }} AS agency_name,
+        {{ clean_empty_strings('agency_url') }} AS agency_url,
+        {{ clean_empty_strings('agency_timezone') }} AS agency_timezone
     FROM source
     WHERE agency_id IS NOT NULL
+),
+
+deduped AS (
+    {{ deduplicate('cleaned', 'agency_id', 'agency_id') }}
 )
 
-SELECT * FROM cleaned
+SELECT * FROM deduped

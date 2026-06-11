@@ -8,6 +8,16 @@ models:
         tests:
           - unique
           - not_null
+          - no_duplicates
+      - name: stop_name
+        tests:
+          - not_null
+      - name: stop_lat
+        tests:
+          - not_null
+      - name: stop_lon
+        tests:
+          - not_null
 
   - name: dim_routes
     description: "Gecleande routes uit GTFS"
@@ -16,9 +26,12 @@ models:
         tests:
           - unique
           - not_null
+          - no_duplicates
       - name: route_type
         tests:
           - not_null
+          - accepted_values:
+              values: ['Tram', 'Metro', 'Trein', 'Bus', 'Ferry', 'Onbekend']
 
   - name: dim_agency
     description: "Vervoerders uit GTFS"
@@ -27,6 +40,7 @@ models:
         tests:
           - unique
           - not_null
+          - no_duplicates
 
   - name: dim_calendar
     description: "Kalender dimensie op basis van calendar_dates"
@@ -34,9 +48,7 @@ models:
       - name: date
         tests:
           - unique
-          - not_null:
-              config:
-                severity: warn
+          - not_null
       - name: day_of_week
         tests:
           - not_null
@@ -53,8 +65,9 @@ models:
       - name: route_id
         tests:
           - not_null
+          - relationships:
+              to: ref('dim_routes')
+              field: route_id
       - name: date
         tests:
-          - not_null:
-              config:
-                severity: warn
+          - not_null

@@ -1,0 +1,11 @@
+dbt_ov:
+  target: dev
+  outputs:
+    dev:
+      type: databricks
+      catalog: ov-pipeline
+      schema: standardized
+      host: dbc-13d0bdd4-38ff.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/a47400fd7ea0bda4
+      token: dapibff72b4ebb71b351b051ad0b3eb3dede
+      threads: 1
