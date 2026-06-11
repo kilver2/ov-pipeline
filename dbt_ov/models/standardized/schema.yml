@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: dim_stops
+    description: "Gecleande haltes uit GTFS"
+    columns:
+      - name: stop_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_routes
+    description: "Gecleande routes uit GTFS"
+    columns:
+      - name: route_id
+        tests:
+          - unique
+          - not_null
+      - name: route_type
+        tests:
+          - not_null
+
+  - name: dim_agency
+    description: "Vervoerders uit GTFS"
+    columns:
+      - name: agency_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_calendar
+    description: "Kalender dimensie op basis van calendar_dates"
+    columns:
+      - name: date
+        tests:
+          - unique
+          - not_null:
+              config:
+                severity: warn
+      - name: day_of_week
+        tests:
+          - not_null
+      - name: is_weekend
+        tests:
+          - not_null
+
+  - name: fct_trips
+    description: "Feittabel met ritten gekoppeld aan kalender"
+    columns:
+      - name: trip_id
+        tests:
+          - not_null
+      - name: route_id
+        tests:
+          - not_null
+      - name: date
+        tests:
+          - not_null:
+              config:
+                severity: warn

@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: agg_trips_per_agency
+    description: "Aantal ritten per vervoerder en type vervoer"
+    columns:
+      - name: agency_name
+        tests:
+          - not_null
+      - name: route_type
+        tests:
+          - not_null
+      - name: total_trips
+        tests:
+          - not_null
+
+  - name: agg_trips_per_day
+    description: "Aantal ritten per dag van de week"
+    columns:
+      - name: day_of_week
+        tests:
+          - not_null
+      - name: total_trips
+        tests:
+          - not_null

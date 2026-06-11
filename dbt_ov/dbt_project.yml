@@ -31,6 +31,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   dbt_ov:
-    # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    +database: ov-pipeline
+    standardized:
+      +materialized: table
+      +schema: standardized
+    reporting:
+      +materialized: table
+      +schema: reporting
