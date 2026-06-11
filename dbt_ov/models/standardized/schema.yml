@@ -1,21 +1,21 @@
 version: 2
 
 models:
-  - name: dim_stops
+  - name: dim_haltes
     description: "Gecleande haltes uit GTFS"
     columns:
-      - name: stop_id
+      - name: halte_id
         tests:
           - unique
           - not_null
           - no_duplicates
-      - name: stop_name
+      - name: halte_naam
         tests:
           - not_null
-      - name: stop_lat
+      - name: breedtegraad
         tests:
           - not_null
-      - name: stop_lon
+      - name: lengtegraad
         tests:
           - not_null
 
@@ -27,39 +27,39 @@ models:
           - unique
           - not_null
           - no_duplicates
-      - name: route_type
+      - name: vervoerstype
         tests:
           - not_null
           - accepted_values:
               values: ['Tram', 'Metro', 'Trein', 'Bus', 'Ferry', 'Onbekend']
 
-  - name: dim_agency
+  - name: dim_bureau
     description: "Vervoerders uit GTFS"
     columns:
-      - name: agency_id
+      - name: bureau_id
         tests:
           - unique
           - not_null
           - no_duplicates
 
-  - name: dim_calendar
+  - name: dim_kalender
     description: "Kalender dimensie op basis van calendar_dates"
     columns:
-      - name: date
+      - name: datum
         tests:
           - unique
           - not_null
-      - name: day_of_week
+      - name: dag_van_de_week
         tests:
           - not_null
       - name: is_weekend
         tests:
           - not_null
 
-  - name: fct_trips
+  - name: fct_ritten
     description: "Feittabel met ritten gekoppeld aan kalender"
     columns:
-      - name: trip_id
+      - name: rit_id
         tests:
           - not_null
       - name: route_id
@@ -68,6 +68,6 @@ models:
           - relationships:
               to: ref('dim_routes')
               field: route_id
-      - name: date
+      - name: datum
         tests:
           - not_null

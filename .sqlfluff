@@ -1,0 +1,18 @@
+[sqlfluff]
+templater = dbt
+dialect = sparksql
+runaway_limit = 10
+max_line_length = 120
+
+[sqlfluff:templater:dbt]
+project_dir = ./dbt_ov
+profiles_dir = ./dbt_ov
+
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = upper
+
+[sqlfluff:rules:capitalisation.identifiers]
+capitalisation_policy = lower
+
+[sqlfluff:rules:capitalisation.functions]
+capitalisation_policy = upper

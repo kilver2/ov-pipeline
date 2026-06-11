@@ -6,6 +6,8 @@ import os
 import io
 import base64
 
+
+# Inladen van de env voor Databricks
 load_dotenv()
 
 HOST = os.getenv("DATABRICKS_HOST")
@@ -14,14 +16,16 @@ HTTP_PATH = os.getenv("DATABRICKS_HTTP_PATH")
 REST_HOST = f"https://{HOST}"
 GTFS_PATH = "data/gtfs-nl"
 
+# Files inladen, waren eerst met filter op aantal, nu niet meer
 FILES = {
     "raw_agency": ("agency.txt", None),
     "raw_routes": ("routes.txt", None),
     "raw_stops": ("stops.txt", None),
-    "raw_trips": ("trips.txt", 50000),
-    "raw_calendar_dates": ("calendar_dates.txt", 50000),
+    "raw_trips": ("trips.txt", None),
+    "raw_calendar_dates": ("calendar_dates.txt", None),
 }
 
+# Verander de dataframe naar parquet en upload de files
 def upload_parquet(df: pd.DataFrame, table_name: str):
     buffer = io.BytesIO()
     df.to_parquet(buffer, index=False)
@@ -36,6 +40,7 @@ def upload_parquet(df: pd.DataFrame, table_name: str):
         data=buffer.read()
     ).raise_for_status()
 
+# Maak/vervang de tabel met de data uit de parquet files
 def create_table(table_name: str):
     with sql.connect(server_hostname=HOST, http_path=HTTP_PATH, access_token=TOKEN) as conn:
         with conn.cursor() as cursor:
@@ -45,6 +50,7 @@ def create_table(table_name: str):
                 AS SELECT * FROM parquet.`/Volumes/ov-pipeline/raw/files/{table_name}.parquet`
             """)
 
+# Trigger
 if __name__ == "__main__":
     for table_name, (filename, sample_size) in FILES.items():
         df = pd.read_csv(os.path.join(GTFS_PATH, filename), dtype=str, nrows=sample_size)

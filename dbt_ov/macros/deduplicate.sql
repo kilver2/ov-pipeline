@@ -1,6 +1,6 @@
-{% macro deduplicate(model, partition_by, order_by) %}
+{% macro deduplicate(relation, partition_by, order_by) %}
     SELECT *
-    FROM {{ model }}
+    FROM {{ relation }}
     QUALIFY ROW_NUMBER() OVER (
         PARTITION BY {{ partition_by }}
         ORDER BY {{ order_by }}

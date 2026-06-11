@@ -1,33 +1,33 @@
 version: 2
 
 models:
-  - name: agg_trips_per_agency
-    description: "Aantal ritten per vervoerder en type vervoer"
+  - name: agg_ritten_per_bureau
+    description: "Aantal ritten per vervoerder en vervoerstype"
     columns:
-      - name: agency_name
+      - name: bureau_naam
         tests:
           - not_null
-      - name: route_type
+      - name: vervoerstype
         tests:
           - not_null
-      - name: total_trips
+      - name: totaal_ritten
         tests:
           - not_null
 
-  - name: agg_trips_per_route
+  - name: agg_ritten_per_route
     description: "Aantal ritten per route"
     columns:
-      - name: route_short_name
+      - name: route_korte_naam
         tests:
           - not_null
-      - name: total_trips
+      - name: totaal_ritten
         tests:
           - not_null
 
   - name: agg_rituitval
-    description: "Rituitval percentage per vervoerder en type vervoer"
+    description: "Rituitval percentage per vervoerder en vervoerstype"
     columns:
-      - name: agency_name
+      - name: bureau_naam
         tests:
           - not_null
       - name: uitval_percentage
