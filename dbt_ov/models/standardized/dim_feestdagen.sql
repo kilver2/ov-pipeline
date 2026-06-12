@@ -8,7 +8,7 @@ cleaned AS (
         {{ clean_empty_strings('localname') }} AS feestdag_naam,
         {{ clean_empty_strings('name') }} AS feestdag_naam_en,
         jaar::INT AS jaar,
-        CASE WHEN fixed = 'true' THEN TRUE ELSE FALSE END AS is_vast
+        coalesce(fixed = 'true', FALSE) AS is_vast
     FROM source
     WHERE date IS NOT NULL
 )

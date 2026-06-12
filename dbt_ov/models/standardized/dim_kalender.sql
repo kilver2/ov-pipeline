@@ -9,6 +9,7 @@ feestdagen AS (
 gecleand AS (
     SELECT DISTINCT
         b.date AS datum,
+        f.feestdag_naam,
         TO_DATE(b.date, 'yyyyMMdd') AS datum_geparsed,
         DAYOFWEEK(TO_DATE(b.date, 'yyyyMMdd')) AS dag_van_de_week,
         CASE DAYOFWEEK(TO_DATE(b.date, 'yyyyMMdd'))
@@ -38,10 +39,9 @@ gecleand AS (
         END AS maand_naam,
         YEAR(TO_DATE(b.date, 'yyyyMMdd')) AS jaar,
         COALESCE(DAYOFWEEK(TO_DATE(b.date, 'yyyyMMdd')) IN (1, 7), FALSE) AS is_weekend,
-        CASE WHEN f.datum IS NOT NULL THEN TRUE ELSE FALSE END AS is_feestdag,
-        f.feestdag_naam
-    FROM bron b
-    LEFT JOIN feestdagen f ON TO_DATE(b.date, 'yyyyMMdd') = TO_DATE(f.datum, 'yyyy-MM-dd')
+        COALESCE(f.datum IS NOT NULL, FALSE) AS is_feestdag
+    FROM bron AS b
+    LEFT JOIN feestdagen AS f ON TO_DATE(b.date, 'yyyyMMdd') = TO_DATE(f.datum, 'yyyy-MM-dd')
 )
 
 SELECT * FROM gecleand
