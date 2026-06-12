@@ -10,3 +10,4 @@ sources:
       - name: raw_agency
       - name: raw_trips
       - name: raw_calendar_dates
+      - name: raw_feestdagen

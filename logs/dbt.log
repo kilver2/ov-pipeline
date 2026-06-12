@@ -178,3 +178,18 @@ Runtime Error
 [0m16:57:49.044821 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC5B3DB230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC5B6917F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DC583B9C70>]}
 [0m16:57:49.044821 [debug] [MainThread]: Flushing usage events
 [0m16:57:49.486475 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:40:30.032302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029F586CD820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029F5C62B2C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029F5BFE9BE0>]}
+
+
+============================== 11:40:30.040427 | 8d51d19b-c31b-44d2-b043-dd2dcd100444 ==============================
+[0m11:40:30.040427 [info ] [MainThread]: Running with dbt=1.11.8
+[0m11:40:30.041403 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\kisha\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run --select dim_feestdagen dim_kalender fct_ritten', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m11:40:30.041403 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\projects\ov-pipeline\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:40:30.042407 [debug] [MainThread]: Command `dbt run` failed at 11:40:30.042407 after 0.22 seconds
+[0m11:40:30.043429 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029F5CB08C20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029F5C7F0290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029F5B752360>]}
+[0m11:40:30.043429 [debug] [MainThread]: Flushing usage events
+[0m11:40:30.494849 [debug] [MainThread]: An error was encountered while trying to flush usage events
