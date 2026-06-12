@@ -25,6 +25,10 @@ jobs:
           pip install sqlfluff sqlfluff-templater-dbt
           pip install dbt-databricks
 
+      - name: dbt deps
+        working-directory: dbt_ov
+        run: dbt deps
+
       - name: Run SQLFluff
         run: |
           sqlfluff lint dbt_ov/models/ --dialect sparksql
