@@ -1,0 +1,40 @@
+{"timestamp":"2026-06-12T14:43:17.178665Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-06-12T14:43:17.180847Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/standardized_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-06-12T14:43:18.919992Z","level":"info","event":"\u001b[0m14:43:18  Running with dbt=1.11.11","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:20.796212Z","level":"info","event":"\u001b[0m14:43:20  Registered adapter: databricks=1.12.1","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:21.129123Z","level":"info","event":"\u001b[0m14:43:21  Unable to do partial parsing because of a version mismatch","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:25.331028Z","level":"info","event":"\u001b[0m14:43:25  [\u001b[33mWARNING\u001b[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:25.331810Z","level":"info","event":"functionality","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:25.332647Z","level":"info","event":"Found top-level arguments to test `dbt_utils.accepted_range` defined on","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:25.333474Z","level":"info","event":"'agg_rituitval' in package 'dbt_ov' (models/reporting/schema.yml). Arguments to","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:25.334352Z","level":"info","event":"generic tests should be nested under the `arguments` property.","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:25.974980Z","level":"info","event":"\u001b[0m14:43:25  Found 10 models, 30 data tests, 6 sources, 1145 macros","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:25.982266Z","level":"info","event":"\u001b[0m14:43:25","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:25.983420Z","level":"info","event":"\u001b[0m14:43:25  Concurrency: 1 threads (target='dev')","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:25.984249Z","level":"info","event":"\u001b[0m14:43:25","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:31.570332Z","level":"info","event":"\u001b[0m14:43:31  1 of 6 START sql table model standardized.dim_bureau ........................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:38.180674Z","level":"info","event":"\u001b[0m14:43:38  1 of 6 OK created sql table model standardized.dim_bureau ...................... [\u001b[32mOK\u001b[0m in 6.61s]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:38.184906Z","level":"info","event":"\u001b[0m14:43:38  2 of 6 START sql table model standardized.dim_feestdagen ....................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:42.034046Z","level":"info","event":"\u001b[0m14:43:42  2 of 6 OK created sql table model standardized.dim_feestdagen .................. [\u001b[32mOK\u001b[0m in 3.84s]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:42.047752Z","level":"info","event":"\u001b[0m14:43:42  3 of 6 START sql table model standardized.dim_haltes ........................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:46.278652Z","level":"info","event":"\u001b[0m14:43:46  3 of 6 OK created sql table model standardized.dim_haltes ...................... [\u001b[32mOK\u001b[0m in 4.23s]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:46.282628Z","level":"info","event":"\u001b[0m14:43:46  4 of 6 START sql table model standardized.dim_routes ........................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:50.444616Z","level":"info","event":"\u001b[0m14:43:50  4 of 6 OK created sql table model standardized.dim_routes ...................... [\u001b[32mOK\u001b[0m in 4.16s]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:50.457872Z","level":"info","event":"\u001b[0m14:43:50  5 of 6 START sql table model standardized.dim_kalender ......................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:58.485248Z","level":"info","event":"\u001b[0m14:43:58  5 of 6 OK created sql table model standardized.dim_kalender .................... [\u001b[32mOK\u001b[0m in 8.03s]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:43:58.490776Z","level":"info","event":"\u001b[0m14:43:58  6 of 6 START sql table model standardized.fct_ritten ........................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:44:20.494493Z","level":"info","event":"\u001b[0m14:44:20  6 of 6 OK created sql table model standardized.fct_ritten ...................... [\u001b[32mOK\u001b[0m in 22.00s]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:44:20.501107Z","level":"info","event":"\u001b[0m14:44:20","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:44:20.502243Z","level":"info","event":"\u001b[0m14:44:20  Finished running 6 table models in 0 hours 0 minutes and 54.52 seconds (54.52s).","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:44:20.724393Z","level":"info","event":"\u001b[0m14:44:20","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:44:20.725414Z","level":"info","event":"\u001b[0m14:44:20  \u001b[32mCompleted successfully\u001b[0m","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:44:20.726325Z","level":"info","event":"\u001b[0m14:44:20","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:44:20.727426Z","level":"info","event":"\u001b[0m14:44:20  Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:44:20.728794Z","level":"info","event":"\u001b[0m14:44:20  [\u001b[33mWARNING\u001b[0m][DeprecationsSummary]: Deprecated functionality","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:44:20.729647Z","level":"info","event":"Summary of encountered deprecations:","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:44:20.730263Z","level":"info","event":"- MissingArgumentsPropertyInGenericTestDeprecation: 3 occurrences","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:44:20.731011Z","level":"info","event":"To see all deprecation instances instead of just the first occurrence of each,","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:44:20.731663Z","level":"info","event":"run command again with the `--show-all-deprecations` flag. You may also need to","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:44:20.732208Z","level":"info","event":"run with `--no-partial-parse` as some deprecations are only encountered during","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:44:20.733081Z","level":"info","event":"parsing.","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:44:21.843325Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":229}

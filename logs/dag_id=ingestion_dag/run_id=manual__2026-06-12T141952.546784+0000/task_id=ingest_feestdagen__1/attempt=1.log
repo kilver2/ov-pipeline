@@ -1,0 +1,56 @@
+{"timestamp":"2026-06-12T14:19:53.441184Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-06-12T14:19:53.447046Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/ingestion_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-06-12T14:20:01.512386Z","level":"error","event":"Traceback (most recent call last):","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.514423Z","level":"error","event":"  File \"/opt/airflow/ingestion/ingest_feestdagen.py\", line 18, in <module>","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.515080Z","level":"error","event":"    create_table(\"raw_feestdagen\")","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.515699Z","level":"error","event":"    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.516201Z","level":"error","event":"  File \"/opt/airflow/ingestion/utils.py\", line 33, in create_table","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.516816Z","level":"error","event":"    cursor.execute(f\"\"\"","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.517230Z","level":"error","event":"    ~~~~~~~~~~~~~~^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.517779Z","level":"error","event":"        CREATE OR REPLACE TABLE `ov-pipeline`.raw.{table_name}","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.518285Z","level":"error","event":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.518733Z","level":"error","event":"        USING DELTA","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.519128Z","level":"error","event":"        ^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.519660Z","level":"error","event":"        AS SELECT * FROM parquet.`/Volumes/ov-pipeline/raw/files/{table_name}.parquet`","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.520164Z","level":"error","event":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.520670Z","level":"error","event":"    \"\"\")","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.521190Z","level":"error","event":"    ^^^^","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.521757Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.13/site-packages/databricks/sql/telemetry/latency_logger.py\", line 182, in wrapper","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.522294Z","level":"error","event":"    return func(self, *args, **kwargs)","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.522698Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.13/site-packages/databricks/sql/client.py\", line 1341, in execute","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.523112Z","level":"error","event":"    self.active_result_set = self.backend.execute_command(","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.523516Z","level":"error","event":"                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.523929Z","level":"error","event":"        operation=prepared_operation,","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.524339Z","level":"error","event":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.524747Z","level":"error","event":"    ...<10 lines>...","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.525236Z","level":"error","event":"        query_tags=query_tags,","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.525685Z","level":"error","event":"        ^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.526183Z","level":"error","event":"    )","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.526581Z","level":"error","event":"    ^","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.527048Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.13/site-packages/databricks/sql/backend/thrift_backend.py\", line 1066, in execute_command","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.527441Z","level":"error","event":"    execute_response, has_more_rows = self._handle_execute_response(","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.527993Z","level":"error","event":"                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.528482Z","level":"error","event":"        resp, cursor","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.528921Z","level":"error","event":"        ^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.529368Z","level":"error","event":"    )","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.529808Z","level":"error","event":"    ^","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.530281Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.13/site-packages/databricks/sql/backend/thrift_backend.py\", line 1273, in _handle_execute_response","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.530710Z","level":"error","event":"    final_operation_state = self._wait_until_command_done(","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.531222Z","level":"error","event":"        resp.operationHandle,","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.531699Z","level":"error","event":"        resp.directResults and resp.directResults.operationStatus,","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.532085Z","level":"error","event":"    )","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.532479Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.13/site-packages/databricks/sql/backend/thrift_backend.py\", line 941, in _wait_until_command_done","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.532888Z","level":"error","event":"    self._check_command_not_in_error_or_closed_state(","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.533261Z","level":"error","event":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.533722Z","level":"error","event":"        op_handle, initial_operation_status_resp","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.534156Z","level":"error","event":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.534554Z","level":"error","event":"    )","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.534943Z","level":"error","event":"    ^","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.535345Z","level":"error","event":"  File \"/home/airflow/.local/lib/python3.13/site-packages/databricks/sql/backend/thrift_backend.py\", line 634, in _check_command_not_in_error_or_closed_state","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.535731Z","level":"error","event":"    raise ServerOperationError(","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.536147Z","level":"error","event":"    ...<7 lines>...","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.536703Z","level":"error","event":"    )","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.537131Z","level":"error","event":"databricks.sql.exc.ServerOperationError: [DELTA_METADATA_CHANGED] MetadataChangedException: The metadata of the Delta table has been changed by a concurrent update. Please try the operation again.","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.537553Z","level":"error","event":"Conflicting commit: {\"timestamp\":1781274001801,\"userId\":\"77168859683574\",\"userName\":\"kishan-rules@hotmail.com\",\"operation\":\"CREATE OR REPLACE TABLE AS SELECT\",\"operationParameters\":{\"partitionBy\":\"[]\",\"clusterBy\":\"[]\",\"description\":null,\"isManaged\":\"true\",\"properties\":\"{\\\"delta.checkpoint.writeStatsAsJson\\\":\\\"false\\\",\\\"delta.checkpoint.writeStatsAsStruct\\\":\\\"true\\\",\\\"delta.parquet.compression.codec\\\":\\\"zstd\\\",\\\"delta.enableDeletionVectors\\\":\\\"true\\\"}\",\"statsOnLoad\":true},\"queryHistoryStatementId\":\"01f16669-cb30-1e54-b6eb-93d9eedc5042\",\"readVersion\":3,\"isolationLevel\":\"WriteSerializable\",\"isBlindAppend\":false,\"operationMetrics\":{\"numFiles\":\"1\",\"numRemovedFiles\":\"1\",\"numRemovedBytes\":\"3211\",\"numDeletionVectorsRemoved\":\"0\",\"numOutputRows\":\"22\",\"numOutputBytes\":\"3211\"},\"tags\":{\"noRowsCopied\":\"true\",\"restoresDeletedRows\":\"false\"},\"engineInfo\":\"Databricks-Runtime/18.1.x-aarch64-photon-scala2.13\",\"txnId\":\"bc1ffde1-118a-49a8-baf2-982351011ccc\"}","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:01.538040Z","level":"error","event":"Refer to https://docs.databricks.com/delta/concurrency-control.html for more details.","logger":"task.stderr"}
+{"timestamp":"2026-06-12T14:20:02.236522Z","level":"error","event":"Task failed with exception","logger":"task","filename":"task_runner.py","lineno":1347,"error_detail":[{"exc_type":"CalledProcessError","exc_value":"Command '['uv', 'run', 'ingestion/ingest_feestdagen.py']' returned non-zero exit status 1.","exc_notes":[],"syntax_error":null,"is_cause":false,"frames":[{"filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1263,"name":"run"},{"filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/execution_time/task_runner.py","lineno":1678,"name":"_execute_task"},{"filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/bases/operator.py","lineno":443,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/bases/decorator.py","lineno":398,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/bases/operator.py","lineno":443,"name":"wrapper"},{"filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/providers/standard/operators/python.py","lineno":227,"name":"execute"},{"filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/providers/standard/operators/python.py","lineno":250,"name":"execute_callable"},{"filename":"/home/airflow/.local/lib/python3.13/site-packages/airflow/sdk/execution_time/callback_runner.py","lineno":97,"name":"run"},{"filename":"/opt/airflow/dags/ingestion_dag.py","lineno":72,"name":"ingest_feestdagen"},{"filename":"/usr/python/lib/python3.13/subprocess.py","lineno":577,"name":"run"}],"is_group":false,"exceptions":[]}]}

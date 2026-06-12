@@ -8,6 +8,7 @@ dependencies = [
     "databricks-sdk>=0.77.0",
     "dbt-databricks",
     "pandas>=2.2.3",
+    "prefect>=3.7.4",
     "python-dotenv>=1.2.2",
     "requests>=2.34.2",
     "sqlfluff>=4.2.2",
