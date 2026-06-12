@@ -67,6 +67,10 @@ jobs:
                 threads: 1
           EOF
 
+      - name: dbt deps
+        working-directory: dbt_ov
+        run: dbt deps
+
       - name: dbt compile
         working-directory: dbt_ov
         run: dbt compile
