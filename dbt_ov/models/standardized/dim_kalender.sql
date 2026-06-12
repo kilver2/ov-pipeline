@@ -22,6 +22,20 @@ gecleand AS (
         END AS dag_naam,
         WEEKOFYEAR(TO_DATE(b.date, 'yyyyMMdd')) AS weeknummer,
         MONTH(TO_DATE(b.date, 'yyyyMMdd')) AS maand,
+        CASE MONTH(TO_DATE(b.date, 'yyyyMMdd'))
+            WHEN 1 THEN 'Januari'
+            WHEN 2 THEN 'Februari'
+            WHEN 3 THEN 'Maart'
+            WHEN 4 THEN 'April'
+            WHEN 5 THEN 'Mei'
+            WHEN 6 THEN 'Juni'
+            WHEN 7 THEN 'Juli'
+            WHEN 8 THEN 'Augustus'
+            WHEN 9 THEN 'September'
+            WHEN 10 THEN 'Oktober'
+            WHEN 11 THEN 'November'
+            WHEN 12 THEN 'December'
+        END AS maand_naam,
         YEAR(TO_DATE(b.date, 'yyyyMMdd')) AS jaar,
         COALESCE(DAYOFWEEK(TO_DATE(b.date, 'yyyyMMdd')) IN (1, 7), FALSE) AS is_weekend,
         CASE WHEN f.datum IS NOT NULL THEN TRUE ELSE FALSE END AS is_feestdag,
