@@ -60,6 +60,9 @@ jobs:
       - name: Install dbt
         run: pip install dbt-databricks
 
+      - name: Debug profiles.yml
+        run: cat ~/.dbt/profiles.yml
+
       - name: Create profiles.yml
         run: |
           mkdir -p ~/.dbt
