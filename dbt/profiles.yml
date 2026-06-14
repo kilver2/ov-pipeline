@@ -1,4 +1,4 @@
-dbt_ov:
+dbt:
   target: dev
   outputs:
     dev:
