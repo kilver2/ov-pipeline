@@ -60,9 +60,6 @@ jobs:
       - name: Install dbt
         run: pip install dbt-databricks
 
-      - name: Debug profiles.yml
-        run: cat ~/.dbt/profiles.yml
-
       - name: Create profiles.yml
         run: |
           mkdir -p ~/.dbt
@@ -79,6 +76,9 @@ jobs:
                 token: ${{ secrets.DATABRICKS_TOKEN }}
                 threads: 1
           EOF
+      
+      - name: Debug profiles.yml
+        run: cat ~/.dbt/profiles.yml
 
       - name: dbt deps
         working-directory: dbt
