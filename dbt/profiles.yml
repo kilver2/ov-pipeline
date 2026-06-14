@@ -5,7 +5,7 @@ dbt_ov:
       type: databricks
       catalog: ov-pipeline
       schema: standardized
-      host: dbc-13d0bdd4-38ff.cloud.databricks.com
-      http_path: /sql/1.0/warehouses/a47400fd7ea0bda4
-      token: dapi10ea9c78d671abc19dc0bb477cbf07c6
+      host: "{{ env_var('DATABRICKS_HOST') }}"
+      http_path: "{{ env_var('DATABRICKS_HTTP_PATH') }}"
+      token: "{{ env_var('DATABRICKS_TOKEN') }}"
       threads: 1

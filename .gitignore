@@ -6,4 +6,4 @@ __pycache__/
 .DS_Store
 gtfs-nl/
 data/
-dbt_ov/profiles.yml
+dbt/profiles.yml
