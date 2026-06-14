@@ -4,7 +4,7 @@ WITH ritten AS (
     SELECT * FROM {{ source('raw', 'raw_trips') }}
 ),
 
--- Inladen raw kalender en ook dim_kalender. Vanwege raw calender(service_id), die niet meer beschikbaar is in dim_kalendar. Service_id link je uiteindelijk met trips
+-- Vanwege raw calender(service_id), die niet beschikbaar is in kalendar. Service_id link je uiteindelijk met trips
 kalender_datums AS (
     SELECT * FROM {{ source('raw', 'raw_calendar_dates') }}
 ),
