@@ -1,0 +1,25 @@
+{"timestamp":"2026-06-14T15:53:14.003192Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-06-14T15:53:14.005053Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/reporting_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-06-14T15:53:15.858148Z","level":"info","event":"\u001b[0m15:53:15  Running with dbt=1.11.11","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:17.819351Z","level":"info","event":"\u001b[0m15:53:17  Registered adapter: databricks=1.12.1","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:20.787149Z","level":"info","event":"\u001b[0m15:53:20  Found 9 models, 30 data tests, 6 sources, 1145 macros","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:20.805469Z","level":"info","event":"\u001b[0m15:53:20","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:20.806376Z","level":"info","event":"\u001b[0m15:53:20  Concurrency: 1 threads (target='dev')","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:20.807247Z","level":"info","event":"\u001b[0m15:53:20","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:25.549104Z","level":"info","event":"\u001b[0m15:53:25  1 of 5 START test not_null_agg_ritten_per_bureau_bureau_naam ................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:27.236349Z","level":"info","event":"\u001b[0m15:53:27  1 of 5 PASS not_null_agg_ritten_per_bureau_bureau_naam ......................... [\u001b[32mPASS\u001b[0m in 1.69s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:27.252023Z","level":"info","event":"\u001b[0m15:53:27  2 of 5 START test not_null_agg_ritten_per_bureau_totaal_ritten ................. [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:28.778826Z","level":"info","event":"\u001b[0m15:53:28  2 of 5 PASS not_null_agg_ritten_per_bureau_totaal_ritten ....................... [\u001b[32mPASS\u001b[0m in 1.53s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:28.783757Z","level":"info","event":"\u001b[0m15:53:28  3 of 5 START test not_null_agg_ritten_per_bureau_vervoerstype .................. [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:30.246008Z","level":"info","event":"\u001b[0m15:53:30  3 of 5 PASS not_null_agg_ritten_per_bureau_vervoerstype ........................ [\u001b[32mPASS\u001b[0m in 1.46s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:30.255035Z","level":"info","event":"\u001b[0m15:53:30  4 of 5 START test not_null_agg_ritten_per_route_route_korte_naam ............... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:31.804237Z","level":"info","event":"\u001b[0m15:53:31  4 of 5 PASS not_null_agg_ritten_per_route_route_korte_naam ..................... [\u001b[32mPASS\u001b[0m in 1.55s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:31.808484Z","level":"info","event":"\u001b[0m15:53:31  5 of 5 START test not_null_agg_ritten_per_route_totaal_ritten .................. [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:33.264566Z","level":"info","event":"\u001b[0m15:53:33  5 of 5 PASS not_null_agg_ritten_per_route_totaal_ritten ........................ [\u001b[32mPASS\u001b[0m in 1.45s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:33.279539Z","level":"info","event":"\u001b[0m15:53:33","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:33.280306Z","level":"info","event":"\u001b[0m15:53:33  Finished running 5 data tests in 0 hours 0 minutes and 12.47 seconds (12.47s).","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:33.506639Z","level":"info","event":"\u001b[0m15:53:33","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:33.508042Z","level":"info","event":"\u001b[0m15:53:33  \u001b[32mCompleted successfully\u001b[0m","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:33.509267Z","level":"info","event":"\u001b[0m15:53:33","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:33.512397Z","level":"info","event":"\u001b[0m15:53:33  Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:53:34.624404Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":229}

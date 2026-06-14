@@ -1,3 +1,5 @@
+# TODO: Verplaatsen download naar ingestion functions met subprocess, feestdagen incorperen voor parralel processing
+
 from airflow.sdk import dag, Asset, task
 from datetime import datetime
 
@@ -19,16 +21,17 @@ GTFS_FOLDER = DATA_DIR / "gtfs-nl"
 
 GTFS_URL = "https://gtfs.ovapi.nl/nl/gtfs-nl.zip"
 
-
+# Dag trigger één keer per dag
 @dag(
     dag_id="ingestion_dag",
-    start_date=datetime(2025, 1, 1),
+    start_date=datetime(2026, 6, 10),
     schedule="@daily",
     catchup=False,
     tags=["ingestion"],
 )
 def ingestion_dag():
 
+    # Download alleen als skip_download false is voor DEV purposes
     @task
     def download_gtfs():
 
@@ -44,6 +47,7 @@ def ingestion_dag():
         with open(GTFS_ZIP, "wb") as f:
             f.write(response.content)
 
+    # uitpakken gtfs
     @task
     def extract_gtfs():
 
@@ -56,7 +60,7 @@ def ingestion_dag():
         with zipfile.ZipFile(GTFS_ZIP, "r") as zip_ref:
             zip_ref.extractall(GTFS_FOLDER)
 
-
+    # Asset met call voor ingest functie
     @task(outlets=[raw_gtfs])
     def ingest_gtfs():
 
@@ -66,6 +70,7 @@ def ingestion_dag():
             check=True,
         )
 
+    # Asset met call voor feestdagen ingest functie
     @task(outlets=[raw_feestdagen])
     def ingest_feestdagen():
 
@@ -75,6 +80,7 @@ def ingestion_dag():
             check=True,
         )
 
+    # Opzetten dag flow
     gtfs_download = download_gtfs()
     gtfs_extract = extract_gtfs()
     gtfs_ingest = ingest_gtfs()

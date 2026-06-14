@@ -1,3 +1,4 @@
+# TODO: Expectation tests, negative/positive test en reference tests
 version: 2
 
 models:
@@ -27,6 +28,12 @@ models:
           - unique
           - not_null
           - no_duplicates
+      - name: bureau_id
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_bureau')
+              field: bureau_id
       - name: vervoerstype
         tests:
           - not_null
@@ -71,3 +78,6 @@ models:
       - name: datum
         tests:
           - not_null
+          - relationships:
+              to: ref('dim_kalender')
+              field: datum

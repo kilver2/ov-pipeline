@@ -6,6 +6,7 @@ on:
   pull_request:
     branches: [main]
 
+# 2 Jobs zodat je kan zien of het SQL of dbt logic is die faalt.
 jobs:
   sqlfluff:
     name: SQL Linting
@@ -34,7 +35,7 @@ jobs:
           sqlfluff lint dbt_ov/models/ --dialect sparksql
 
   dbt_compile:
-    name: dbt Compile
+    name: dbt validate
     runs-on: ubuntu-latest
 
     env:
@@ -49,7 +50,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
 
       - name: Install dbt
         run: pip install dbt-databricks
@@ -78,3 +79,7 @@ jobs:
       - name: dbt compile
         working-directory: dbt_ov
         run: dbt compile
+      
+      - name: dbt test
+        working-directory: dbt_ov
+        run: dbt test

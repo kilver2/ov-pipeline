@@ -1,0 +1,44 @@
+{"timestamp":"2026-06-14T15:50:38.404503Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-06-14T15:50:38.408326Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/standardized_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-06-14T15:50:40.668364Z","level":"info","event":"\u001b[0m15:50:40  Running with dbt=1.11.11","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:50:42.685503Z","level":"info","event":"\u001b[0m15:50:42  Registered adapter: databricks=1.12.1","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:50:43.088418Z","level":"info","event":"\u001b[0m15:50:43  Unable to do partial parsing because of a version mismatch","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:50:48.057521Z","level":"info","event":"\u001b[0m15:50:48  [\u001b[33mWARNING\u001b[0m]: Did not find matching node for patch with name 'agg_rituitval' in the 'models' section of file 'models/reporting/schema.yml'","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:50:48.178308Z","level":"info","event":"\u001b[0m15:50:48  [\u001b[33mWARNING\u001b[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:50:48.179271Z","level":"info","event":"functionality","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:50:48.179864Z","level":"info","event":"Found top-level arguments to test `dbt_utils.accepted_range` defined on","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:50:48.180389Z","level":"info","event":"'agg_rituitval' in package 'dbt_ov' (models/reporting/schema.yml). Arguments to","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:50:48.180936Z","level":"info","event":"generic tests should be nested under the `arguments` property.","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:50:48.411650Z","level":"info","event":"\u001b[0m15:50:48  [\u001b[33mWARNING\u001b[0m]: Test 'test.dbt_ov.not_null_agg_rituitval_bureau_naam.f0636f0c39' (models/reporting/schema.yml) depends on a node named 'agg_rituitval' in package '' which was not found","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:50:48.412852Z","level":"info","event":"\u001b[0m15:50:48  [\u001b[33mWARNING\u001b[0m]: Test 'test.dbt_ov.not_null_agg_rituitval_uitval_percentage.154bf8571b' (models/reporting/schema.yml) depends on a node named 'agg_rituitval' in package '' which was not found","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:50:48.414099Z","level":"info","event":"\u001b[0m15:50:48  [\u001b[33mWARNING\u001b[0m]: Test 'test.dbt_ov.dbt_utils_accepted_range_agg_rituitval_uitval_percentage__100__0.7ee03f4df0' (models/reporting/schema.yml) depends on a node named 'agg_rituitval' in package '' which was not found","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:50:48.991008Z","level":"info","event":"\u001b[0m15:50:48  Found 9 models, 30 data tests, 6 sources, 1145 macros","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:50:48.996239Z","level":"info","event":"\u001b[0m15:50:48","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:50:48.997426Z","level":"info","event":"\u001b[0m15:50:48  Concurrency: 1 threads (target='dev')","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:50:48.998577Z","level":"info","event":"\u001b[0m15:50:48","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:50:55.548548Z","level":"info","event":"\u001b[0m15:50:55  1 of 6 START sql table model standardized.dim_bureau ........................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:01.106948Z","level":"info","event":"\u001b[0m15:51:01  1 of 6 OK created sql table model standardized.dim_bureau ...................... [\u001b[32mOK\u001b[0m in 5.55s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:01.111290Z","level":"info","event":"\u001b[0m15:51:01  2 of 6 START sql table model standardized.dim_feestdagen ....................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:05.293339Z","level":"info","event":"\u001b[0m15:51:05  2 of 6 OK created sql table model standardized.dim_feestdagen .................. [\u001b[32mOK\u001b[0m in 4.18s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:05.298097Z","level":"info","event":"\u001b[0m15:51:05  3 of 6 START sql table model standardized.dim_haltes ........................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:10.373504Z","level":"info","event":"\u001b[0m15:51:10  3 of 6 OK created sql table model standardized.dim_haltes ...................... [\u001b[32mOK\u001b[0m in 5.07s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:10.377336Z","level":"info","event":"\u001b[0m15:51:10  4 of 6 START sql table model standardized.dim_routes ........................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:15.101129Z","level":"info","event":"\u001b[0m15:51:15  4 of 6 OK created sql table model standardized.dim_routes ...................... [\u001b[32mOK\u001b[0m in 4.72s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:15.106105Z","level":"info","event":"\u001b[0m15:51:15  5 of 6 START sql table model standardized.dim_kalender ......................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:21.407043Z","level":"info","event":"\u001b[0m15:51:21  5 of 6 OK created sql table model standardized.dim_kalender .................... [\u001b[32mOK\u001b[0m in 6.30s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:21.413651Z","level":"info","event":"\u001b[0m15:51:21  6 of 6 START sql table model standardized.fct_ritten ........................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:41.553861Z","level":"info","event":"\u001b[0m15:51:41  6 of 6 OK created sql table model standardized.fct_ritten ...................... [\u001b[32mOK\u001b[0m in 20.14s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:41.561874Z","level":"info","event":"\u001b[0m15:51:41","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:41.563116Z","level":"info","event":"\u001b[0m15:51:41  Finished running 6 table models in 0 hours 0 minutes and 52.56 seconds (52.56s).","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:41.797127Z","level":"info","event":"\u001b[0m15:51:41","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:41.798337Z","level":"info","event":"\u001b[0m15:51:41  \u001b[32mCompleted successfully\u001b[0m","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:41.799613Z","level":"info","event":"\u001b[0m15:51:41","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:41.800619Z","level":"info","event":"\u001b[0m15:51:41  Done. PASS=6 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=6","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:41.802053Z","level":"info","event":"\u001b[0m15:51:41  [\u001b[33mWARNING\u001b[0m][DeprecationsSummary]: Deprecated functionality","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:41.802880Z","level":"info","event":"Summary of encountered deprecations:","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:41.803580Z","level":"info","event":"- MissingArgumentsPropertyInGenericTestDeprecation: 5 occurrences","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:41.804202Z","level":"info","event":"To see all deprecation instances instead of just the first occurrence of each,","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:41.804737Z","level":"info","event":"run command again with the `--show-all-deprecations` flag. You may also need to","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:41.805292Z","level":"info","event":"run with `--no-partial-parse` as some deprecations are only encountered during","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:41.805933Z","level":"info","event":"parsing.","logger":"task.stdout"}
+{"timestamp":"2026-06-14T15:51:43.051091Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":229}

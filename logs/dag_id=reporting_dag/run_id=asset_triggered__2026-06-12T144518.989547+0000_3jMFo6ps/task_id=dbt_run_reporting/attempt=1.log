@@ -9,3 +9,15 @@
 {"timestamp":"2026-06-12T14:45:31.543636Z","level":"info","event":"\u001b[0m14:45:31  1 of 4 START sql table model reporting.agg_ritten_per_bureau ................... [RUN]","logger":"task.stdout"}
 {"timestamp":"2026-06-12T14:45:35.796536Z","level":"info","event":"\u001b[0m14:45:35  1 of 4 OK created sql table model reporting.agg_ritten_per_bureau .............. [\u001b[32mOK\u001b[0m in 4.25s]","logger":"task.stdout"}
 {"timestamp":"2026-06-12T14:45:35.810181Z","level":"info","event":"\u001b[0m14:45:35  2 of 4 START sql table model reporting.agg_ritten_per_dag ...................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:45:39.781939Z","level":"info","event":"\u001b[0m14:45:39  2 of 4 OK created sql table model reporting.agg_ritten_per_dag ................. [\u001b[32mOK\u001b[0m in 3.98s]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:45:39.786721Z","level":"info","event":"\u001b[0m14:45:39  3 of 4 START sql table model reporting.agg_ritten_per_route .................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:45:43.943223Z","level":"info","event":"\u001b[0m14:45:43  3 of 4 OK created sql table model reporting.agg_ritten_per_route ............... [\u001b[32mOK\u001b[0m in 4.15s]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:45:43.955538Z","level":"info","event":"\u001b[0m14:45:43  4 of 4 START sql table model reporting.agg_rituitval ........................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:45:51.524376Z","level":"info","event":"\u001b[0m14:45:51  4 of 4 OK created sql table model reporting.agg_rituitval ...................... [\u001b[32mOK\u001b[0m in 7.57s]","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:45:51.532901Z","level":"info","event":"\u001b[0m14:45:51","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:45:51.534102Z","level":"info","event":"\u001b[0m14:45:51  Finished running 4 table models in 0 hours 0 minutes and 25.86 seconds (25.86s).","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:45:51.767305Z","level":"info","event":"\u001b[0m14:45:51","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:45:51.783538Z","level":"info","event":"\u001b[0m14:45:51  \u001b[32mCompleted successfully\u001b[0m","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:45:51.784880Z","level":"info","event":"\u001b[0m14:45:51","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:45:51.786167Z","level":"info","event":"\u001b[0m14:45:51  Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=4","logger":"task.stdout"}
+{"timestamp":"2026-06-12T14:45:53.015614Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":229}
