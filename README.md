@@ -2,7 +2,7 @@
 
 ## Projectbeschrijving
 
-Een end-to-end datapipeline die open OV-data omzet naar een rapportagelaag voor analyse. Het project geeft inzicht in rijpatronen, marktaandeel en ritdrukte van Nederlandse OV-vervoerders, met Qbuzz als primaire stakeholder.
+Een end-to-end datapipeline die open OV-data omzet naar een rapportagelaag voor analyse. Het project geeft inzicht in rijpatronen, marktaandeel en ritdrukte van Nederlandse OV-vervoerders
 
 ---
 
