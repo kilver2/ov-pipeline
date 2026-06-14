@@ -1,4 +1,4 @@
-dbt:
+ov-pipeline:
   target: dev
   outputs:
     dev:
