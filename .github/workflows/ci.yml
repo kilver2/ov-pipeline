@@ -27,12 +27,12 @@ jobs:
           pip install dbt-databricks
 
       - name: dbt deps
-        working-directory: dbt_ov
+        working-directory: dbt
         run: dbt deps
 
       - name: Run SQLFluff
         run: |
-          sqlfluff lint dbt_ov/models/ --dialect sparksql
+          sqlfluff lint dbt/models/ --dialect sparksql
 
   dbt_compile:
     name: dbt validate
@@ -59,7 +59,7 @@ jobs:
         run: |
           mkdir -p ~/.dbt
           cat > ~/.dbt/profiles.yml << EOF
-          dbt_ov:
+          dbt:
             target: dev
             outputs:
               dev:
@@ -73,13 +73,13 @@ jobs:
           EOF
 
       - name: dbt deps
-        working-directory: dbt_ov
+        working-directory: dbt
         run: dbt deps
 
       - name: dbt compile
-        working-directory: dbt_ov
+        working-directory: dbt
         run: dbt compile
       
       - name: dbt test
-        working-directory: dbt_ov
+        working-directory: dbt
         run: dbt test
