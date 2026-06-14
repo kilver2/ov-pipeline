@@ -1,4 +1,4 @@
-ov-pipeline:
+ov_pipeline:
   target: dev
   outputs:
     dev:
