@@ -1,7 +1,9 @@
+-- Inladen raw routes
 WITH bron AS (
     SELECT * FROM {{ source('raw', 'raw_routes') }}
 ),
 
+-- Casting, verwijderen onbekende routes, vernederlandsing en toevoegen extra kolom
 gecleand AS (
     SELECT
         {{ clean_empty_strings('route_id') }} AS route_id,
@@ -20,6 +22,7 @@ gecleand AS (
     WHERE route_id IS NOT NULL
 ),
 
+-- Deduplication op route_id
 ontdubbeld AS (
     {{ deduplicate('gecleand', 'route_id', 'route_id') }}
 )

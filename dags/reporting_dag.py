@@ -4,7 +4,7 @@ import subprocess
 
 from dags.assets import standardized_layer, reporting_layer
 
-
+# Event driven trigger op standardized asset
 @dag(
     dag_id="reporting_dag",
     start_date=datetime(2025, 1, 1),
@@ -14,6 +14,7 @@ from dags.assets import standardized_layer, reporting_layer
 )
 def reporting_dag():
 
+    # Aanroepen build
     @task
     def dbt_run_reporting():
         subprocess.run(
@@ -27,6 +28,7 @@ def reporting_dag():
             check=True,
         )
 
+    # Aanroepen test na run
     @task
     def dbt_test_reporting():
         subprocess.run(
@@ -40,6 +42,7 @@ def reporting_dag():
             check=True,
         )
 
+    # extra task voor completion logic
     @task(outlets=[reporting_layer])
     def publish_asset():
         print("Reporting layer klaar")

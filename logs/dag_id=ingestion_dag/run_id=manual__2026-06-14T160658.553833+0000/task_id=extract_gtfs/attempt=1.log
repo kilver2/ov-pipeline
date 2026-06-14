@@ -1,0 +1,4 @@
+{"timestamp":"2026-06-14T16:07:05.284077Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-06-14T16:07:05.289766Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/ingestion_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-06-14T16:07:05.393240Z","level":"info","event":"GTFS al uitgepakt","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:07:05.393166Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":229}

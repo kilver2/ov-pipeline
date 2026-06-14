@@ -1,3 +1,4 @@
+-- Inladne ritten en routes
 WITH ritten AS (
     SELECT * FROM {{ ref('fct_ritten') }}
 ),
@@ -6,6 +7,7 @@ routes AS (
     SELECT * FROM {{ ref('dim_routes') }}
 )
 
+-- Agg voor het totaal aantal ritten per route en vervoerstype.
 SELECT
     r.route_korte_naam,
     r.route_lange_naam,

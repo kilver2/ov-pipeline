@@ -1,0 +1,27 @@
+{"timestamp":"2026-06-14T16:07:57.256485Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-06-14T16:07:57.258322Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/standardized_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-06-14T16:07:59.519757Z","level":"info","event":"\u001b[0m16:07:59  Running with dbt=1.11.11","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:00.689498Z","level":"info","event":"\u001b[0m16:08:00  [\u001b[33mWARNING\u001b[0m]: Deprecated functionality","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:00.690480Z","level":"info","event":"The `calogica/dbt_expectations` package is deprecated in favor of","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:00.691305Z","level":"info","event":"`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:00.691993Z","level":"info","event":"use `metaplane/dbt_expectations` instead.","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:00.758539Z","level":"info","event":"\u001b[0m16:08:00  Installing dbt-labs/dbt_utils","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:07.263473Z","level":"info","event":"\u001b[0m16:08:07  Installed from version 1.3.0","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:07.264240Z","level":"info","event":"\u001b[0m16:08:07  Updated version available: 1.3.3","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:07.266306Z","level":"info","event":"\u001b[0m16:08:07  Installing calogica/dbt_expectations","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:11.402759Z","level":"info","event":"\u001b[0m16:08:11  Installed from version 0.10.4","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:11.420638Z","level":"info","event":"\u001b[0m16:08:11  Up to date!","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:11.421462Z","level":"info","event":"\u001b[0m16:08:11  Installing calogica/dbt_date","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:13.730818Z","level":"info","event":"\u001b[0m16:08:13  Installed from version 0.10.1","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:13.731595Z","level":"info","event":"\u001b[0m16:08:13  Up to date!","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:13.733603Z","level":"info","event":"\u001b[0m16:08:13","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:13.734721Z","level":"info","event":"\u001b[0m16:08:13  Updates available for packages: ['dbt-labs/dbt_utils']","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:13.735550Z","level":"info","event":"Update your versions in packages.yml, then run dbt deps","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:13.736984Z","level":"info","event":"\u001b[0m16:08:13  [\u001b[33mWARNING\u001b[0m][DeprecationsSummary]: Deprecated functionality","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:13.737609Z","level":"info","event":"Summary of encountered deprecations:","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:13.738196Z","level":"info","event":"- PackageRedirectDeprecation: 2 occurrences","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:13.738727Z","level":"info","event":"To see all deprecation instances instead of just the first occurrence of each,","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:13.739259Z","level":"info","event":"run command again with the `--show-all-deprecations` flag. You may also need to","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:13.739765Z","level":"info","event":"run with `--no-partial-parse` as some deprecations are only encountered during","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:13.740335Z","level":"info","event":"parsing.","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:08:14.667886Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":229}

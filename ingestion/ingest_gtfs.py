@@ -4,6 +4,7 @@ import os
 
 GTFS_PATH = "data/gtfs-nl"
 
+# Keuze van files van gtfs
 FILES = {
     "raw_agency": ("agency.txt", None),
     "raw_routes": ("routes.txt", None),
@@ -12,6 +13,7 @@ FILES = {
     "raw_calendar_dates": ("calendar_dates.txt", None),
 }
 
+# Zo raw mogelijk inladen met str en column clears
 if __name__ == "__main__":
     for table_name, (filename, sample_size) in FILES.items():
         df = pd.read_csv(os.path.join(GTFS_PATH, filename), dtype=str, nrows=sample_size)

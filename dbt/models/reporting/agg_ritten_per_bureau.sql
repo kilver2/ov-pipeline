@@ -1,3 +1,4 @@
+-- Inladen ritten, routes, bureaus
 WITH ritten AS (
     SELECT * FROM {{ ref('fct_ritten') }}
 ),
@@ -10,6 +11,7 @@ bureau AS (
     SELECT * FROM {{ ref('dim_bureau') }}
 )
 
+-- Agg voor het totaal aantal ritten per bureau en vervoerstype
 SELECT
     b.bureau_naam,
     r.vervoerstype,

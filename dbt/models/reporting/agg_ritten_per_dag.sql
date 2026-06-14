@@ -1,7 +1,9 @@
+-- Inladen ritten
 WITH ritten AS (
     SELECT * FROM {{ ref('fct_ritten') }}
 )
 
+-- agg voor het totaal aantal ritten per dag vd week
 SELECT
     dag_van_de_week,
     dag_naam,

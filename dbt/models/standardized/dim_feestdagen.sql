@@ -1,7 +1,9 @@
+-- Inladen feestdagen raw
 WITH source AS (
     SELECT * FROM {{ source('raw', 'raw_feestdagen') }}
 ),
 
+-- Vernederlandsing en casting van jaar
 cleaned AS (
     SELECT
         {{ clean_empty_strings('date') }} AS datum,

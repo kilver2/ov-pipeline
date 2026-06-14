@@ -1,0 +1,65 @@
+{"timestamp":"2026-06-14T16:09:13.103231Z","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager","filename":"manager.py","lineno":209}
+{"timestamp":"2026-06-14T16:09:13.105098Z","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/standardized_dag.py","logger":"airflow.dag_processing.dagbag.BundleDagBag","filename":"dagbag.py","lineno":469}
+{"timestamp":"2026-06-14T16:09:15.542075Z","level":"info","event":"\u001b[0m16:09:15  Running with dbt=1.11.11","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:17.920452Z","level":"info","event":"\u001b[0m16:09:17  Registered adapter: databricks=1.12.1","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:21.023491Z","level":"info","event":"\u001b[0m16:09:21  Found 9 models, 30 data tests, 6 sources, 1145 macros","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:21.039267Z","level":"info","event":"\u001b[0m16:09:21","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:21.041083Z","level":"info","event":"\u001b[0m16:09:21  Concurrency: 1 threads (target='dev')","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:21.041865Z","level":"info","event":"\u001b[0m16:09:21","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:25.738595Z","level":"info","event":"\u001b[0m16:09:25  1 of 25 START test accepted_values_dim_routes_vervoerstype__Tram__Metro__Trein__Bus__Ferry__Onbekend  [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:27.395607Z","level":"info","event":"\u001b[0m16:09:27  1 of 25 PASS accepted_values_dim_routes_vervoerstype__Tram__Metro__Trein__Bus__Ferry__Onbekend  [\u001b[32mPASS\u001b[0m in 1.65s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:27.420957Z","level":"info","event":"\u001b[0m16:09:27  2 of 25 START test no_duplicates_dim_bureau_bureau_id .......................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:29.168796Z","level":"info","event":"\u001b[0m16:09:29  2 of 25 PASS no_duplicates_dim_bureau_bureau_id ................................ [\u001b[32mPASS\u001b[0m in 1.75s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:29.188052Z","level":"info","event":"\u001b[0m16:09:29  3 of 25 START test no_duplicates_dim_haltes_halte_id ........................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:31.103887Z","level":"info","event":"\u001b[0m16:09:31  3 of 25 PASS no_duplicates_dim_haltes_halte_id ................................. [\u001b[32mPASS\u001b[0m in 1.91s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:31.109214Z","level":"info","event":"\u001b[0m16:09:31  4 of 25 START test no_duplicates_dim_routes_route_id ........................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:32.683231Z","level":"info","event":"\u001b[0m16:09:32  4 of 25 PASS no_duplicates_dim_routes_route_id ................................. [\u001b[32mPASS\u001b[0m in 1.57s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:32.698889Z","level":"info","event":"\u001b[0m16:09:32  5 of 25 START test not_null_dim_bureau_bureau_id ............................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:34.121037Z","level":"info","event":"\u001b[0m16:09:34  5 of 25 PASS not_null_dim_bureau_bureau_id ..................................... [\u001b[32mPASS\u001b[0m in 1.43s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:34.127580Z","level":"info","event":"\u001b[0m16:09:34  6 of 25 START test not_null_dim_haltes_breedtegraad ............................ [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:35.703201Z","level":"info","event":"\u001b[0m16:09:35  6 of 25 PASS not_null_dim_haltes_breedtegraad .................................. [\u001b[32mPASS\u001b[0m in 1.57s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:35.708461Z","level":"info","event":"\u001b[0m16:09:35  7 of 25 START test not_null_dim_haltes_halte_id ................................ [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:37.260898Z","level":"info","event":"\u001b[0m16:09:37  7 of 25 PASS not_null_dim_haltes_halte_id ...................................... [\u001b[32mPASS\u001b[0m in 1.55s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:37.265362Z","level":"info","event":"\u001b[0m16:09:37  8 of 25 START test not_null_dim_haltes_halte_naam .............................. [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:38.742928Z","level":"info","event":"\u001b[0m16:09:38  8 of 25 PASS not_null_dim_haltes_halte_naam .................................... [\u001b[32mPASS\u001b[0m in 1.48s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:38.758222Z","level":"info","event":"\u001b[0m16:09:38  9 of 25 START test not_null_dim_haltes_lengtegraad ............................. [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:40.285529Z","level":"info","event":"\u001b[0m16:09:40  9 of 25 PASS not_null_dim_haltes_lengtegraad ................................... [\u001b[32mPASS\u001b[0m in 1.53s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:40.290990Z","level":"info","event":"\u001b[0m16:09:40  10 of 25 START test not_null_dim_kalender_dag_van_de_week ...................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:41.777113Z","level":"info","event":"\u001b[0m16:09:41  10 of 25 PASS not_null_dim_kalender_dag_van_de_week ............................ [\u001b[32mPASS\u001b[0m in 1.48s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:41.781390Z","level":"info","event":"\u001b[0m16:09:41  11 of 25 START test not_null_dim_kalender_datum ................................ [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:43.340914Z","level":"info","event":"\u001b[0m16:09:43  11 of 25 PASS not_null_dim_kalender_datum ...................................... [\u001b[32mPASS\u001b[0m in 1.56s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:43.345542Z","level":"info","event":"\u001b[0m16:09:43  12 of 25 START test not_null_dim_kalender_is_weekend ........................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:44.826552Z","level":"info","event":"\u001b[0m16:09:44  12 of 25 PASS not_null_dim_kalender_is_weekend ................................. [\u001b[32mPASS\u001b[0m in 1.48s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:44.845610Z","level":"info","event":"\u001b[0m16:09:44  13 of 25 START test not_null_dim_routes_bureau_id .............................. [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:46.338326Z","level":"info","event":"\u001b[0m16:09:46  13 of 25 PASS not_null_dim_routes_bureau_id .................................... [\u001b[32mPASS\u001b[0m in 1.50s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:46.343722Z","level":"info","event":"\u001b[0m16:09:46  14 of 25 START test not_null_dim_routes_route_id ............................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:47.910568Z","level":"info","event":"\u001b[0m16:09:47  14 of 25 PASS not_null_dim_routes_route_id ..................................... [\u001b[32mPASS\u001b[0m in 1.56s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:47.916361Z","level":"info","event":"\u001b[0m16:09:47  15 of 25 START test not_null_dim_routes_vervoerstype ........................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:49.650004Z","level":"info","event":"\u001b[0m16:09:49  15 of 25 PASS not_null_dim_routes_vervoerstype ................................. [\u001b[32mPASS\u001b[0m in 1.73s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:49.654330Z","level":"info","event":"\u001b[0m16:09:49  16 of 25 START test not_null_fct_ritten_datum .................................. [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:51.288314Z","level":"info","event":"\u001b[0m16:09:51  16 of 25 PASS not_null_fct_ritten_datum ........................................ [\u001b[32mPASS\u001b[0m in 1.63s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:51.304254Z","level":"info","event":"\u001b[0m16:09:51  17 of 25 START test not_null_fct_ritten_rit_id ................................. [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:52.829731Z","level":"info","event":"\u001b[0m16:09:52  17 of 25 PASS not_null_fct_ritten_rit_id ....................................... [\u001b[32mPASS\u001b[0m in 1.53s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:52.833884Z","level":"info","event":"\u001b[0m16:09:52  18 of 25 START test not_null_fct_ritten_route_id ............................... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:54.312874Z","level":"info","event":"\u001b[0m16:09:54  18 of 25 PASS not_null_fct_ritten_route_id ..................................... [\u001b[32mPASS\u001b[0m in 1.47s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:54.320407Z","level":"info","event":"\u001b[0m16:09:54  19 of 25 START test relationships_dim_routes_bureau_id__bureau_id__ref_dim_bureau_  [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:56.061922Z","level":"info","event":"\u001b[0m16:09:56  19 of 25 PASS relationships_dim_routes_bureau_id__bureau_id__ref_dim_bureau_ ... [\u001b[32mPASS\u001b[0m in 1.74s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:56.067155Z","level":"info","event":"\u001b[0m16:09:56  20 of 25 START test relationships_fct_ritten_datum__datum__ref_dim_kalender_ ... [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:58.230775Z","level":"info","event":"\u001b[0m16:09:58  20 of 25 PASS relationships_fct_ritten_datum__datum__ref_dim_kalender_ ......... [\u001b[32mPASS\u001b[0m in 2.16s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:09:58.246707Z","level":"info","event":"\u001b[0m16:09:58  21 of 25 START test relationships_fct_ritten_route_id__route_id__ref_dim_routes_  [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:10:00.162961Z","level":"info","event":"\u001b[0m16:10:00  21 of 25 PASS relationships_fct_ritten_route_id__route_id__ref_dim_routes_ ..... [\u001b[32mPASS\u001b[0m in 1.92s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:10:00.167749Z","level":"info","event":"\u001b[0m16:10:00  22 of 25 START test unique_dim_bureau_bureau_id ................................ [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:10:01.841226Z","level":"info","event":"\u001b[0m16:10:01  22 of 25 PASS unique_dim_bureau_bureau_id ...................................... [\u001b[32mPASS\u001b[0m in 1.67s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:10:01.845733Z","level":"info","event":"\u001b[0m16:10:01  23 of 25 START test unique_dim_haltes_halte_id ................................. [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:10:03.410439Z","level":"info","event":"\u001b[0m16:10:03  23 of 25 PASS unique_dim_haltes_halte_id ....................................... [\u001b[32mPASS\u001b[0m in 1.56s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:10:03.429547Z","level":"info","event":"\u001b[0m16:10:03  24 of 25 START test unique_dim_kalender_datum .................................. [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:10:05.100231Z","level":"info","event":"\u001b[0m16:10:05  24 of 25 PASS unique_dim_kalender_datum ........................................ [\u001b[32mPASS\u001b[0m in 1.68s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:10:05.108105Z","level":"info","event":"\u001b[0m16:10:05  25 of 25 START test unique_dim_routes_route_id ................................. [RUN]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:10:06.688590Z","level":"info","event":"\u001b[0m16:10:06  25 of 25 PASS unique_dim_routes_route_id ....................................... [\u001b[32mPASS\u001b[0m in 1.58s]","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:10:06.696231Z","level":"info","event":"\u001b[0m16:10:06","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:10:06.697292Z","level":"info","event":"\u001b[0m16:10:06  Finished running 25 data tests in 0 hours 0 minutes and 45.66 seconds (45.66s).","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:10:07.028122Z","level":"info","event":"\u001b[0m16:10:07","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:10:07.030057Z","level":"info","event":"\u001b[0m16:10:07  \u001b[32mCompleted successfully\u001b[0m","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:10:07.031315Z","level":"info","event":"\u001b[0m16:10:07","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:10:07.032568Z","level":"info","event":"\u001b[0m16:10:07  Done. PASS=25 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=25","logger":"task.stdout"}
+{"timestamp":"2026-06-14T16:10:08.154553Z","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator","filename":"python.py","lineno":229}

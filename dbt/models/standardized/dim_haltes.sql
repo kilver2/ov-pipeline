@@ -1,7 +1,9 @@
+-- Inladen stops raw
 WITH bron AS (
     SELECT * FROM {{ source('raw', 'raw_stops') }}
 ),
 
+-- Vernederlandsing, casting en rijen verwijderen waar geen stop-id
 gecleand AS (
     SELECT
         {{ clean_empty_strings('stop_id') }} AS halte_id,
@@ -17,6 +19,7 @@ gecleand AS (
         AND stop_name IS NOT NULL
 ),
 
+-- Deduplicaten op halte
 ontdubbeld AS (
     {{ deduplicate('gecleand', 'halte_id', 'halte_id') }}
 )

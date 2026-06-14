@@ -1,3 +1,5 @@
+-- TODO: toevoegen TO_DATE CTE voor Spark SQL
+-- Inladen raw calendar en ook feestdagen
 WITH bron AS (
     SELECT * FROM {{ source('raw', 'raw_calendar_dates') }}
 ),
@@ -6,6 +8,7 @@ feestdagen AS (
     SELECT * FROM {{ ref('dim_feestdagen') }}
 ),
 
+-- Casting, vernederlandsing en toevoegen van extra kolommen
 gecleand AS (
     SELECT DISTINCT
         b.date AS datum,

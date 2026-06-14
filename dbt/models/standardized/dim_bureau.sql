@@ -1,7 +1,9 @@
+-- Inladen Agency raw
 WITH bron AS (
     SELECT * FROM {{ source('raw', 'raw_agency') }}
 ),
 
+-- Cleaning dmv vernederlandsing
 gecleand AS (
     SELECT
         {{ clean_empty_strings('agency_id') }} AS bureau_id,
@@ -12,6 +14,7 @@ gecleand AS (
     WHERE agency_id IS NOT NULL
 ),
 
+-- Deduplication op bureau_id
 ontdubbeld AS (
     {{ deduplicate('gecleand', 'bureau_id', 'bureau_id') }}
 )

@@ -13,6 +13,8 @@ models:
       - name: totaal_ritten
         tests:
           - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
 
   - name: agg_ritten_per_route
     description: "Aantal ritten per route"
@@ -23,18 +25,30 @@ models:
       - name: totaal_ritten
         tests:
           - not_null
-
-  - name: agg_rituitval
-    description: "Rituitval percentage per vervoerder en vervoerstype"
-    columns:
-      - name: bureau_naam
-        tests:
-          - not_null
-      - name: uitval_percentage
-        tests:
-          - not_null
-      - name: uitval_percentage
-        tests:
           - dbt_utils.accepted_range:
               min_value: 0
-              max_value: 100
+
+  - name: agg_ritten_per_dag
+    description: "Aantal ritten per dag van de week"
+    columns:
+      - name: dag_van_de_week
+        tests:
+          - not_null
+          - unique
+          - dbt_utils.accepted_range:
+              min_value: 1
+              max_value: 7
+      - name: dag_naam
+        tests:
+          - not_null
+          - unique
+          - accepted_values:
+              values: ['Maandag', 'Dinsdag', 'Woensdag', 'Donderdag', 'Vrijdag', 'Zaterdag', 'Zondag']
+      - name: is_weekend
+        tests:
+          - not_null
+      - name: totaal_ritten
+        tests:
+          - not_null
+          - dbt_utils.accepted_range:
+              min_value: 0
